@@ -1,44 +1,19 @@
-import React, {useState, useEffect } from 'react'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { Products } from './pages/products'
+import { Users } from './pages/users'
 
 function App() {
-
-  const[data, setData] = useState([]);
-
-  const getProdutos = async () => {
-    fetch("http://localhost/www/api_php/index.php")
-    .then((response) => response.json())
-    .then((responseJson) => (
-      setData(responseJson.records)
-    ))
-  }
-
-  useEffect(() => {
-    getProdutos();
-  }, [])
-
-  return (
+  return(
     <div>
-      <table>
-        <thead>
-            <tr>
-              <th>ID</th>
-              <th>Título</th>
-              <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-          {Object.values(data).map(produto => (   
-            <tr key={produto.id} >
-                <td>{produto.id}</td>
-                <td>{produto.titulo}</td>
-                <td>{produto.descricao}</td>
-                <td>Ações</td>
-            </tr>
-            ))}
-        </tbody>
-      </table>
+      <Router>
+        <Switch>
+          <Route path="/" component={Products} />
+          <Route path="/users" component={Users} />
+        </Switch>
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;

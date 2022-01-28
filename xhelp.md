@@ -15,7 +15,17 @@
     Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
 
-# instalações
-[] npm install react-router-dom
+# instalações React Router Dom precisando atenção
+[x] npm install react-router-dom@5.2.0
+  * exteja usando uma versão mais nova com erro usar o comando
+  * npm uninstall react-router-dom
 
-# pro
+# instalação do Boostrap
+  [x] npm install bootstrap
+  [x] import 'bootstrap/dist/css/bootstrap.min.css';
+  * configurar o index.js com o import
+
+# intalação do styled components
+  [] npm install --save styled-components
+
+#
