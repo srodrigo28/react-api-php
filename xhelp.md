@@ -14,3 +14,8 @@
   npm run eject
     Removes this tool and copies build dependencies, configuration files
     and scripts into the app directory. If you do this, you can’t go back!
+
+# instalações
+[] npm install react-router-dom
+
+# pro
